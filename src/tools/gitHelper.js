@@ -28,7 +28,7 @@ class GitHelper {
    */
   downloadProject({ repo, version = '', repoPath }) {
     let versionStr = version.length > 0 ? `#${version}` : version
-    console.log(`---url: ${this.orgName}/${repo}${versionStr}`)
+    // console.log(`---url: ${this.orgName}/${repo}${versionStr}`)
     return new Promise((resolve, reject) => {
       download(`${this.orgName}/${repo}${versionStr}`, repoPath, (err) => {
         if (err) reject(err);

@@ -1,10 +1,10 @@
 {
   "name": "growth-cli",
-  "version": "0.0.2",
-  "description": "前端脚手架工具 growth-cli",
+  "version": "0.0.3",
+  "description": "前端脚手架cli工具",
   "main": "index.js",
   "bin": {
-    "growth-cli": "bin/growth.js"
+    "growth": "bin/growth.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/zyprepare/growth-cli#readme",
   "dependencies": {
     "@babel/core": "^7.1.6",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-polyfill": "^6.26.0",
