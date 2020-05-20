@@ -2,6 +2,7 @@
  * 下载项目模板
  */
 
+const { existsSync } = require('fs');
 // 命令管理
 const commander = require('commander');
 // 命令行交互工具
@@ -84,11 +85,14 @@ class Download {
       {
         type: 'input',
         name: 'repoPath',
-        message: '请输入项目名称~',
+        message: '请输入项目名称:',
         validate(v) {
           const done = this.async();
           if (!v.trim()) {
             done('项目名称不能为空~');
+          }
+          if (existsSync(`./${v}`)) {
+            done('项目名称已存在~');
           }
           done(null, true);
         },
@@ -100,7 +104,8 @@ class Download {
     try {
       downLoadLoad = this.downLoad.start();
       await this.gitHelper.downloadProject({ repo, version, repoPath });
-      downLoadLoad.succeed('下载代码成功');
+      downLoadLoad.succeed('下载代码成功！');
+      downLoadLoad.info(`You can execute command：cd ${repoPath}, and view README.md file.`);
     } catch (error) {
       console.log(error);
       downLoadLoad.fail('下载代码失败...');

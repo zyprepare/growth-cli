@@ -1,6 +1,6 @@
 {
   "name": "growth-cli",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "前端脚手架cli工具",
   "main": "index.js",
   "bin": {

@@ -2,4 +2,4 @@
 exports.baseURL = 'https://api.github.com';
 // github 组织名称
 exports.orgName = 'growth-org';
-exports.token = '32fab92748116eb9ecffbe06f3c0acd425fb7071';
+exports.token = '62f91f15713af46c4639d60e9a8e4f25aea0eced';
