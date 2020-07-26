@@ -4,9 +4,9 @@ const { baseURL, token } = require('../../config');
 const instance = axios.create({
   baseURL,
   timeout: 6e4,
-  headers: {
-    Authorization: `token ${token.split(' ').reverse().join('')}`,
-  },
+  // headers: {
+  //   Authorization: `token ${token.split(' ').reverse().join('')}`,
+  // },
 });
 
 // Add a request interceptor

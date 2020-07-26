@@ -1,6 +1,7 @@
 const download = require('download-git-repo');
 const request = require('./request');
 const { orgName } = require('../../config');
+const axios = require('axios');
 
 class GitHelper {
   constructor() {
@@ -11,7 +12,7 @@ class GitHelper {
    * 获取项目模板列表
    */
   getProjectList() {
-    return request(`/orgs/${this.orgName}/repos`)
+    return axios.get(`https://api.github.com/orgs/growth-org/repos`)
   }
 
   /**

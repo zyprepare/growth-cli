@@ -40,7 +40,8 @@ class Download {
     // 获取所在项目组的所有可开发项目列表
     try {
       getProListLoad = this.getProList.start();
-      repos = await this.gitHelper.getProjectList();
+      let data = await this.gitHelper.getProjectList();
+      repos = data.data;
       getProListLoad.succeed('获取项目列表成功');
     } catch (error) {
       console.log(error);
